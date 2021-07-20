@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-spring-boot
+spec:
+  template:
+    spec:
+      containers:
+      - name: hello-spring-boot
+        image: quay.io/jonkey/hello-spring-boot:1

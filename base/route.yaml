@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app.kubernetes.io/component: hello-spring-boot
+    app.kubernetes.io/instance: hello-spring-boot
+    app.kubernetes.io/part-of: hello-spring-boot
+  name: hello-spring-boot
+spec:
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: hello-spring-boot
+    weight: 100
+  wildcardPolicy: None
